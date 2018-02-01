@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Магазин</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 0, 500 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val(  ui.values[ 0 ] );
+        $( "#amount_1" ).val(  ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val(   $( "#slider-range" ).slider( "values", 0 ) );
+    $( "#amount_1" ).val(   $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+  </script>
+</head>
+
+
+<body>
+	<header>
+		<div class="conteiner">
+			<div class="logo_header clearfix">
+				<h1><a href="#"><img src="img/logo_header.png" alt="Safe_sale" class="logo"></a></h1>
+			</div>
+			<div class="basket">
+			  <ul class="menu">
+				<li>
+				  <a href="#" class="sell__button">продать</a>
+				</li>
+				<li>
+				  <a href="#" class="enter__button"><img src="img/men_user.png" alt="Safe_sale" class="men_user">войти</a>
+				</li>
+				<li>
+				  <a href="#"><img src="img/basket.png" alt="Safe_sale" class="img"></a>
+				  <span class="basket_price">0,00</span>
+				</li>
+			  </ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="conteiner content">
+		<section class="search">
+             <form>
+             <div class="search_top">
+             	<input type="text" class="a1" placeholder="Поиск">
+             	<a href="#" class="b2"><img src="img/search.png" alt="Safe_sale"></a>
+             </div>	
+             	                   <div class="line_green"></div>
+
+             	  <div class="select">
+             	      <select>
+             		      <option value="0" class="option">Введите город</option>
+             		      <option value="0">Киев</option>
+             		      <option value="0">Одеса</option>
+             		      <option value="0">Хмельнитский</option>
+             		      <option value="0">Винница</option>
+             		      <option value="0">Ровно</option>
+             		      <option value="0">Луцк</option>
+             	      </select>
+             	  </div>
+
+             	  <div class="select select_1">
+             	      <select>
+             		      <option value="0" class="option">Pайон</option>
+             		      <option value="0">Option 1</option>
+             		      <option value="0">Option 2</option>
+             		      <option value="0">Option 3</option>
+             		      <option value="0">Option 4</option>
+             		      <option value="0">Option 5</option>
+             		      <option value="0">Option 6</option>
+             	      </select>
+             	  </div>
+             	                   <div class="line_green"></div>
+
+
+             	  <div class="select select_1" style="margin-top: 0px;">
+             	      <select>
+             		      <option value="0" class="option">Транспорт</option>
+             		      <option value="0">Option 1</option>
+             		      <option value="0">Option 2</option>
+             		      <option value="0">Option 3</option>
+             		      <option value="0">Option 4</option>
+             		      <option value="0">Option 5</option>
+             		      <option value="0">Option 6</option>
+             	      </select>
+             	  </div>
+
+             	  <div class="select select_1">
+             	      <select>
+             		      <option value="0" class="option">Авто</option>
+             		      <option value="0">Option 1</option>
+             		      <option value="0">Option 2</option>
+             		      <option value="0">Option 3</option>
+             		      <option value="0">Option 4</option>
+             		      <option value="0">Option 5</option>
+             		      <option value="0">Option 6</option>
+             	      </select>
+             	  </div>
+
+             	  <div class="select select_1">
+             	      <select>
+             		      <option value="0" class="option">Мersedes</option>
+             		      <option value="0">Option 1</option>
+             		      <option value="0">Option 2</option>
+             		      <option value="0">Option 3</option>
+             		      <option value="0">Option 4</option>
+             		      <option value="0">Option 5</option>
+             		      <option value="0">Option 6</option>
+             	      </select>
+             	  </div>
+
+             	  <div class="select select_1">
+             	      <select>
+             		      <option value="0" class="option">G55 AMG</option>
+             		      <option value="0">Option 1</option>
+             		      <option value="0">Option 2</option>
+             		      <option value="0">Option 3</option>
+             		      <option value="0">Option 4</option>
+             		      <option value="0">Option 5</option>
+             		      <option value="0">Option 6</option>
+             	      </select>
+             	  </div>
+
+             	  <div class="select select_1">
+             	      <select>
+             		      <option value="0" class="option">Год 2010-2014</option>
+             		      <option value="0">Option 1</option>
+             		      <option value="0">Option 2</option>
+             		      <option value="0">Option 3</option>
+             		      <option value="0">Option 4</option>
+             		      <option value="0">Option 5</option>
+             		      <option value="0">Option 6</option>
+             	      </select>
+             	  </div> 
+             	                    <div class="line_green"></div>
+
+
+                          <p>
+                            <label for="amount" class="label_slider">Цена</label>
+                            <input type="text" id="amount" placeholder="от">
+                            <input type="text" id="amount_1" placeholder="до">
+                          </p>
+ 
+                       <div id="slider-range"></div>
+                                    
+                                    <div class="line_green"></div>
+                          
+                            <a href="#" class="search_bottom">
+                                <img src="img/search.png" alt="Safe_sale" class="search_bottom_logo">
+                                   Поиск</a>  
+                                 
+
+             </form>
+		</section>
+
+		<section class="product">
+			<h3>промо товары</h3>
+			  <div class="product_all">
+
+			     <div class="product_wraper">
+			      <a href="#">
+			  	   <img src="img/product_5.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+			  	</a>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_4.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_3.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_2.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_1.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+               
+               
+			  </div>
+			 
+
+		</section>
+
+
+		<section class="product product_margin_color">
+			<h3><strong>VIP</strong> объявления</h3>
+			  <div class="product_all">
+
+			     <div class="product_wraper">
+			  	   <img src="img/product_5.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_4.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_3.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_2.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+
+			  	<div class="product_wraper">
+			  	   <img src="img/product_1.png" alt="Safe_sale">
+			  		  <div class="size_price">
+			  		      <h5>Перфоратор BOSCH</h5>
+			  		      <span>цена</span>
+			  		      <span>600</span>
+			  		  </div>
+			  		<div class="bet">
+			  		      <p>Ставка</p>
+			  		      <span class="right span">650</span>
+			  		</div> 
+			  	    <div class="ransom">
+			  		      <p>Выкуп</p>
+			  		      <span class="right span">1200</span>
+			  		</div>
+			  	</div>
+               
+               
+			  </div>
+		</section>
+
+	</div>
+
+	<footer>
+		<div class="conteiner">
+		     <img src="img/logo_footer.png" alt="Safe_sale" class="footer_logo">
+			<div class="footer">
+				<ul class="menu_footer menu_footer_1">
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Потребителям</a></li>
+					<li><a href="#">Продавцам</a></li>
+					<li><a href="#">Защита покупателям</a></li>
+				</ul>
+
+				<ul class="menu_footer menu_footer_2">
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Возврат и обмен</a></li>
+					<li><a href="#">Партнерская пргорамма</a></li>
+					<li><a href="#">Технические предложение</a></li>
+				</ul>
+
+				<ul class="menu_footer menu_footer_3">
+					<li><a href="#"><img src="img/facebook.png"></a></li>
+					<li><a href="#"><img src="img/youtub.png"></a></li>
+					<li><a href="#"><img src="img/google.png"></a></li>
+				</ul>
+			</div>
+			
+		</div>
+        <div class="footer_down">
+	          <div class="conteiner">
+				<p>© 2017 студия Masters-Api.com.ua. Все права защищены.</p>
+				<ul class="footer_down_menu">
+					<li><a href="#">Споры и жалобы</a></li>
+					<li><a href="#">Пользовальское соглашение</a></li>
+				</ul>
+				</div>
+			</div>
+	</footer>
+	       
+		 
+</body>
+</html>
